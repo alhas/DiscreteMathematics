@@ -1,0 +1,5 @@
+1. How to store the values from fuzzy set
+	1. Dictionary is more usable.
+2. Complementation of the sets. 
+3. Union of the sets.
+4. Intersection of the sets.
