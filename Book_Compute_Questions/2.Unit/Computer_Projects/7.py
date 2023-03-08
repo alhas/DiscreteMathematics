@@ -17,12 +17,27 @@ def matrix_multi():
 
         except IndexError:
             print(f"\t   {B[i]}")
+    value_a = list()
+    value_b = list()
+    index_a = 0
+    for row in A:
+        for x in range(len(row)):
+            value_a.append(A[index_a][x])
+        index_a += 1
 
-    for i in A[0][1]:
-        print(i)
+    for column in range(len(B[0])):
+        for i in range(len(B)):
+            # value_b = B[i][index_b]
+            value_b.append(B[i][column])
+
+    print(value_a, value_b)
 
 
-# print(f'{A[0][0]*B[0][0] + A[0][1]*B[1][0] + A[0][2]*B[2][0]}')
+
+
+# Index Error on B
+
+# print(f'{A[0][0]*B[0][3] + A[0][1]*B[1][3] + A[0][2]*B[2][3]}')
 # Complation need for first row first column calculation.
 
 
