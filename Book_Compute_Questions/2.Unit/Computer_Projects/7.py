@@ -15,17 +15,21 @@ def matrix_multi():
 
         except IndexError:
             print(f"\t   {B[i_row]}")
-    value_a = int()
-    value_b = int()
 
-    for x_row in range(len(A)):
-        for x_column in range(len(A[0])):
-            value_a = A[x_row][x_column]
-    for y_column in range(len(B[0])):
-        for i_row in range(len(B)):
-            value_b = B[i_row][y_column]
+    result = [] # final result
+    for i in range(len(A)):
 
-    print(value_a, value_b)
+        row = [] # the new row in new matrix
+        for j in range(len(B[0])):
+            item = 0 # the new element in the new row
+            for v in range(len(A[i])):
+                item += A[i][v] * B[v][j]
+            row.append(item) # append sum of product into the new row
+        
+        result.append(row) # append the new row into the final result
+
+    for i in range(len(result)):
+        print(f"{result[i]}")
 
 
 # Index Error on B
